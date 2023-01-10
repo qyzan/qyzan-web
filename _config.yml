@@ -1,10 +1,8 @@
 ### Site Settings ###
 title               : Home
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
-baseurl             : "/qyzan-web"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+                      Cyber Security Students/Enthusiast @ Politeknik Negeri Batam
+baseurl             : "/qyzan-web"                 # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : qyzan/qyzan-web              # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : qyzan/qyzan-web
 open_new_tab        : false                        # Opens external URLs in new tab (works for posts, projects and navbar only)
@@ -33,7 +31,7 @@ author:
 # facebook          : your_username
   github            : https://github.com/qyzan/
 # gitlab            : your_username
-# instagram         : your_username
+  instagram         : https://www.instagram.com/qyzan__/
 # kaggle            : your_username
 #  linkedin          : your_username
 #  medium            : your_username
