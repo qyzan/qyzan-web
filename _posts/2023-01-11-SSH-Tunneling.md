@@ -116,7 +116,7 @@ Dalam perintah diatas kita menggunakan beberapa opsi, dengan penjelasan berikut.
 -	**Number char cols** – banyaknya kolom VARCHAR yang dibuat pada table.
 -	**Auto generate sql** – otomatis membuat SQL ketika tidak disediakan dati file atau baris perintah.
 
-1.	SSH
+1. SSH
 
 ![image](https://user-images.githubusercontent.com/94363381/211846261-39f64ffc-c3aa-4a65-b9ef-cbb7e21acc1a.png)
 
