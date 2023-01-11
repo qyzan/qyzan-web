@@ -10,17 +10,17 @@ Berikut adalah cara penggunaan SSH Tunneling;
 
 ## Penjelasan
 
-A. SSH Tunneling.
+### A. SSH Tunneling.
 
 SSH Tunneling atau bisa disebut dengan penerusan port SSH (Forwarding Port) secara sederhana tunneling berarti mengirimkan data melalui koneksi lain yang sudah terbentuk. Teknik ini sangat cocok dipakai sebagai backdoor, langsung menembus ke dalam ( behind enemy line) melewati semua firewall, IDS, IPS atau apapun itu di perbatasan.
 
-B. Cara Kerja SSH Tunneling.
+### B. Cara Kerja SSH Tunneling.
 
 Forwarding Port memungkin kita mengakses jaringan lokal yang tidak terekspos ke internet. Misal kita ingin mengakses server database di Politeknik Negeri Batam dari rumah. Untuk alasan keamanan jaringan tertentu, server database tersebut hanya dapat diakses dan dikonfigurasi melalui koneksi dari jaringan local Politeknik Negeri Batam. Tetapi jika kita memiliki akses ke server SSH di kantor, dan server SSH itu memungkinkan koneksi dari luar jaringan local Politeknik Negeri Batam. Maka kita dapat terhubung ke server SSH itu dari rumah dan mengakses server database seolah-olah kita berada di Politeknik Negeri Batam. Ini lebih sering dilakukan di perusahaan besar, karena lebih mudah untuk mengamankan satu server SSH terhadap serangan daripada mengamankan berbagai sumber daya jaringan yang berbeda.
 
 Untuk melakukan ini, kita perlu membuat koneksi SSH dengan server SSH dan memberitahu klien untuk meneruskan lalu lintas dari port tertentu dari Leptop (PC local) kita. Misal, port 1234 ke alamat server database dan port nya di jaringan Politeknik Negeri Batam. Jadi ketika kita mencoba mengakses server databases di port 1234 di Leptop kita saat ini, localhost, lalu lintas itu akan secara otomatis disalurkan melalui koneksi SSH dan dikirim ke server database. Server SSH duduk di tengah, meneruskan lalu lintas bolak balik. Untuk lebih jelasnya kita akan implementkan di server local buatan sendiri menggunakan VM.
 
-C. Jenis SSH Port Forwarding.
+### C. Jenis SSH Port Forwarding.
 
 1. Local SSH Port Forwarding – tipe ini mem-forward port yang diminta di local ke remote server (SSH Server). Misalnya kita ingin mengakses sebuah database atau aplikasi web yang berada di remote server (SSH Server) tapi terhalang firewall, sehingga tidak bisa di akses secara langsung, hanya komputer yang berada dalam satu private network yang bisa mengaksesnya.
 2. Remote SSh Port Forwarding – tipe ini merupakan kebalikan dari Local SSH Port Forwarding. Misal database atau aplikasi web yang ada di komputer local ingin dapat diakses di internet. Kita dapat menggunakan tipe ini.
@@ -29,7 +29,7 @@ C. Jenis SSH Port Forwarding.
 
 ## Implementasi
 
-A.	Implementasi SSH Tunnel
+### A.	Implementasi SSH Tunnel
 
 Untuk melakukan implementasi kita memerlukan 2 VM yaitu server databases dan server web dengan menggukan OS Ubuntu. 
 
@@ -39,7 +39,7 @@ IP :
 -	Host [192.168.56.1]
 	
 
-#### Local SSH Port Forwarding
+##### Local SSH Port Forwarding
 
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -L [local_port]:[remote_address]:[remote_port] user@ip-server”** 
 Kali ini saya akan ssh dari Host ke server Database
@@ -63,7 +63,7 @@ Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh t
 
 
 
-#### Remote SSH Port Forwarding
+##### Remote SSH Port Forwarding
 
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -R [remote_port]:[local_address]:[local_port] user@ip-server”**
 
@@ -84,7 +84,7 @@ Karena di komputer saya menggunakan XAMPP maka kita dapat mengakses database han
 
 
 
-#### Dynamic SSH Port Forwarding
+##### Dynamic SSH Port Forwarding
 
 Kita akan melakukan SSH Tunnelling ke server untuk format commandnya sendiri **“ ssh -D [ip_local]:[port_local] user@ip-server”.**
 
@@ -106,7 +106,7 @@ Kita scan port 8080 menggunakan nmap :
 
 
 
-B.	Performa SSH Tunnel
+### B.	Performa SSH Tunnel
 
 Pada kasus ini saya akan melakukan percobaan untuk mengukur performa pada database saat menggunakan SSH, SSH Tunnel, dan secara local. 
 
@@ -120,15 +120,15 @@ Dalam perintah diatas kita menggunakan beberapa opsi, dengan penjelasan berikut.
 -	**Number char cols** – banyaknya kolom VARCHAR yang dibuat pada table.
 -	**Auto generate sql** – otomatis membuat SQL ketika tidak disediakan dati file atau baris perintah.
 
-#### SSH
+##### SSH
 
 ![image](https://user-images.githubusercontent.com/94363381/211846261-39f64ffc-c3aa-4a65-b9ef-cbb7e21acc1a.png)
 
-#### SSH Tunneling
+##### SSH Tunneling
 
 ![image](https://user-images.githubusercontent.com/94363381/211846323-adae772a-f240-410c-bd4c-cced0e267081.png)
 
-#### Local
+##### Local
 
 ![image](https://user-images.githubusercontent.com/94363381/211846400-31853b5a-0eef-4b3c-9b57-0f31ed98fc72.png)
 
@@ -139,7 +139,7 @@ Dilihat dari beberapa percobaan diatas dapat disimpulkan bahwa ketika tidak dite
 
 ## Penutup
 
-A.	Kesimpulan.
+### A.	Kesimpulan.
 
 SSH Tunneling memungkinkan kita mengakses server dari jarak jauh tanpa terhalang oleh firewall. SSH Tunneling sendiri memiliki tiga tipe yaitu Local SSH Tunneling, Remote SSH Tunneling, Dynamic SSH Tunneling yang mana masing masing memiliki kegunaan masing masing.
 
