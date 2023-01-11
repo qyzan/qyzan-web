@@ -62,6 +62,7 @@ Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh t
 ![image](https://user-images.githubusercontent.com/94363381/211844195-34620cb7-20d3-4dcb-aa53-c72091f6dc6d.png)
 
 
+
 #### Remote SSH Port Forwarding
 
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -R [remote_port]:[local_address]:[local_port] user@ip-server”**
@@ -82,6 +83,7 @@ Karena di komputer saya menggunakan XAMPP maka kita dapat mengakses database han
 ![image](https://user-images.githubusercontent.com/94363381/211845134-ad207c5a-a374-43b4-b8d7-81525a96a5e3.png)
 
 
+
 #### Dynamic SSH Port Forwarding
 
 Kita akan melakukan SSH Tunnelling ke server untuk format commandnya sendiri **“ ssh -D [ip_local]:[port_local] user@ip-server”.**
@@ -100,6 +102,8 @@ Biasanya akan terdapat log seperti dibawah ini jika kita sedang menggunakan SSH 
 Kita scan port 8080 menggunakan nmap :
 
 ![image](https://user-images.githubusercontent.com/94363381/211845322-3bbf433d-4814-4b3c-aaaa-0c972aac0e3b.png)
+
+
 
 
 B.	Performa SSH Tunnel
@@ -129,6 +133,9 @@ Dalam perintah diatas kita menggunakan beberapa opsi, dengan penjelasan berikut.
 ![image](https://user-images.githubusercontent.com/94363381/211846400-31853b5a-0eef-4b3c-9b57-0f31ed98fc72.png)
 
 Dilihat dari beberapa percobaan diatas dapat disimpulkan bahwa ketika tidak diterapkan keamanan (enkripsi packet) maka waktu yang dipakai untuk menjalankan perintah lebih cepat dibandingkan ketika menggunakan keamanan enkripsi paket yang mana SSH sendiri, merupakan sebuah protokol jaringan yang berjalan pada protokol TCP/IP, dengan memfasilitasi teknik enkripsi saat pertukaran paket sedang berlangsung. 
+
+
+
 
 ## Penutup
 
