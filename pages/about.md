@@ -9,15 +9,13 @@ weight: 3
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
 
-- 🔭 I’m currently working on **Perimeter Security**
+I'm interested in the world of cybersecurity, want to learn more about cybersecurity 
 
 - 🌱 I’m currently learning **Perimeter Security, Penetration Testing**
 
 - 👨‍💻 All of my projects are available at [https://qyzan.github.io/project](https://qyzan.github.io/qyzan-web/projects/)
 
 - 📝 I regularly write articles on [https://qyzan.github.io/post](https://qyzan.github.io/qyzan-web/blog)
-
-- 💬 Ask me about **Cyber Security Fundamental**
 
 - 📫 How to reach me **al.khairul09@gmail.com**
 
