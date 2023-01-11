@@ -40,16 +40,19 @@ IP :
 	
 
 1.	Local SSH Port Forwarding
+
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -L [local_port]:[remote_address]:[remote_port] user@ip-server”** 
 Kali ini saya akan ssh dari Host ke server Database
 Kasusnya : di server database sudah setup phpmyadmin sehingga dapat diakses melalui web untuk koneksi ke database nya.
 
-![alt text](https://i.imgur.com/5qJ6dqp.png "Screenshot")
+![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
+
 
 
 Setelah menjalankan perintah tersebut, kita dapat mengakses database dengan port 3333. Ketika kita sedang mengakses sebenarnya kita sedang mengakses server database dengan port 3306 dan 80. Dikarenakan kita setup phpmyadmin di server database kita bisa liat koneksi nya melalui host dengan http://localhost[port_local], 
 
-![alt text](https://i.imgur.com/SCQcc0r.png "Screenshot")
+![image](https://user-images.githubusercontent.com/94363381/211854869-f8e0d4d9-1d1b-40cb-88fc-194c5d599f57.png)
+
 ___
 
 Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh tunneling, kita dapat mengaksesnya dengan http://localhost[local_port], sama hal nya dengan server database, ketika kita sedangan mengakses localhost dengan local_port sebenarnya kita sedang mengakses http://[ip_server_web].
@@ -60,6 +63,7 @@ Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh t
 
 
 2. Remote SSH Port Forwarding
+
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -R [remote_port]:[local_address]:[local_port] user@ip-server”**
 
 Kali ini saya akan SSH Tunneling melalui server ke Host
@@ -79,6 +83,7 @@ Karena di komputer saya menggunakan XAMPP maka kita dapat mengakses database han
 
 
 3. Dynamic SSH Port Forwarding
+
 Kita akan melakukan SSH Tunnelling ke server untuk format commandnya sendiri **“ ssh -D [ip_local]:[port_local] user@ip-server”.**
 
 ![image](https://user-images.githubusercontent.com/94363381/211845061-271ba50a-9c8b-46d1-98b4-e0c3c7aeaff4.png)
@@ -98,6 +103,7 @@ Kita scan port 8080 menggunakan nmap :
 
 
 B.	Performa SSH Tunnel
+
 Pada kasus ini saya akan melakukan percobaan untuk mengukur performa pada database saat menggunakan SSH, SSH Tunnel, dan secara local. 
 
 Kita akan mencoba mengukur performa dari database mysql dari SSH tanpa Tunneling, command : **“mysqlslap --user=root --password --concurrency=5 --iterations=5 --create-schema=test --number-int-cols=5 --number-char-cols=5 --auto-generate-sql --verbose”**
