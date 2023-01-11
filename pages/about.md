@@ -8,7 +8,18 @@ weight: 3
 # **About Me**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+- 🔭 I’m currently working on **Perimeter Security**
+
+- 🌱 I’m currently learning **Perimeter Security, Penetration Testing**
+
+- 👨‍💻 All of my projects are available at [https://qyzan.github.io/project](https://qyzan.github.io/qyzan-web/projects/)
+
+- 📝 I regularly write articles on [https://qyzan.github.io/post](https://qyzan.github.io/qyzan-web/blog)
+
+- 💬 Ask me about **Cyber Security Fundamental**
+
+- 📫 How to reach me **al.khairul09@gmail.com**
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
