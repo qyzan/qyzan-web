@@ -39,7 +39,7 @@ IP :
 -	Host [192.168.56.1]
 	
 
-1.	Local SSH Port Forwarding
+### Local SSH Port Forwarding
 
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -L [local_port]:[remote_address]:[remote_port] user@ip-server”** 
 Kali ini saya akan ssh dari Host ke server Database
@@ -62,7 +62,7 @@ Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh t
 ![image](https://user-images.githubusercontent.com/94363381/211844195-34620cb7-20d3-4dcb-aa53-c72091f6dc6d.png)
 
 
-2. Remote SSH Port Forwarding
+### Remote SSH Port Forwarding
 
 Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **“ssh -R [remote_port]:[local_address]:[local_port] user@ip-server”**
 
@@ -82,7 +82,7 @@ Karena di komputer saya menggunakan XAMPP maka kita dapat mengakses database han
 ![image](https://user-images.githubusercontent.com/94363381/211845134-ad207c5a-a374-43b4-b8d7-81525a96a5e3.png)
 
 
-3. Dynamic SSH Port Forwarding
+### Dynamic SSH Port Forwarding
 
 Kita akan melakukan SSH Tunnelling ke server untuk format commandnya sendiri **“ ssh -D [ip_local]:[port_local] user@ip-server”.**
 
@@ -116,15 +116,15 @@ Dalam perintah diatas kita menggunakan beberapa opsi, dengan penjelasan berikut.
 -	**Number char cols** – banyaknya kolom VARCHAR yang dibuat pada table.
 -	**Auto generate sql** – otomatis membuat SQL ketika tidak disediakan dati file atau baris perintah.
 
-1. SSH
+### SSH
 
 ![image](https://user-images.githubusercontent.com/94363381/211846261-39f64ffc-c3aa-4a65-b9ef-cbb7e21acc1a.png)
 
-2. SSH Tunneling
+### SSH Tunneling
 
 ![image](https://user-images.githubusercontent.com/94363381/211846323-adae772a-f240-410c-bd4c-cced0e267081.png)
 
-3. Local
+### Local
 
 ![image](https://user-images.githubusercontent.com/94363381/211846400-31853b5a-0eef-4b3c-9b57-0f31ed98fc72.png)
 
