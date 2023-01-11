@@ -1,7 +1,7 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: Laravel
+  percentage: 50
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: Jekyll
+  percentage: 50
   color: success
