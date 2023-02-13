@@ -24,7 +24,7 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Khairul
-  image             : https://github.com/qyzan/qyzan-web/blob/main/assets/image/IMG_8702.JPG
+  image             : ../assets/image/IMG_8702.JPG
 # behance           : your_username
 # dribbble          : your_username
   email             : al.khairul09@gmail.com
