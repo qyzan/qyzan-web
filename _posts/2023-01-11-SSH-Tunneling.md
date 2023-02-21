@@ -97,11 +97,11 @@ Kemudian setup proxy di web browser.
 Dengan menggunakan perintah diatas kita akan membuat sebuah proxy dengan menggunakan SOCKS proxy, yang mana website yang kita akses melalui perantara server, sehingga yang terbaca mengunjungi website adalah IP server bukan IP dari host (local).
 Biasanya akan terdapat log seperti dibawah ini jika kita sedang menggunakan SSH Tunneling Dynamis :
 
-![image](https://user-images.githubusercontent.com/94363381/211845410-19960544-ad37-4d5d-b9df-b8f14d98afe0.png)
+![image](https://user-images.githubusercontent.com/94363381/211845322-3bbf433d-4814-4b3c-aaaa-0c972aac0e3b.png)
 
 Kita scan port 8080 menggunakan nmap :
 
-![image](https://user-images.githubusercontent.com/94363381/211845322-3bbf433d-4814-4b3c-aaaa-0c972aac0e3b.png)
+![image](https://user-images.githubusercontent.com/94363381/211845410-19960544-ad37-4d5d-b9df-b8f14d98afe0.png)
 
 
 
