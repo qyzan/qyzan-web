@@ -45,13 +45,13 @@ Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **â€
 Kali ini saya akan ssh dari Host ke server Database
 Kasusnya : di server database sudah setup phpmyadmin sehingga dapat diakses melalui web untuk koneksi ke database nya.
 
-![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
+![image](https://user-images.githubusercontent.com/94363381/211854869-f8e0d4d9-1d1b-40cb-88fc-194c5d599f57.png)
 
 
 
 Setelah menjalankan perintah tersebut, kita dapat mengakses database dengan port 3333. Ketika kita sedang mengakses sebenarnya kita sedang mengakses server database dengan port 3306 dan 80. Dikarenakan kita setup phpmyadmin di server database kita bisa liat koneksi nya melalui host dengan http://localhost[port_local], 
 
-![image](https://user-images.githubusercontent.com/94363381/211854869-f8e0d4d9-1d1b-40cb-88fc-194c5d599f57.png)
+![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
 
 ___
 
