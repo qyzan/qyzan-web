@@ -51,7 +51,7 @@ Kasusnya : di server database sudah setup phpmyadmin sehingga dapat diakses mela
 
 Setelah menjalankan perintah tersebut, kita dapat mengakses database dengan port 3333. Ketika kita sedang mengakses sebenarnya kita sedang mengakses server database dengan port 3306 dan 80. Dikarenakan kita setup phpmyadmin di server database kita bisa liat koneksi nya melalui host dengan http://localhost[port_local], 
 
-![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
+![image](https://user-images.githubusercontent.com/94363381/211844195-34620cb7-20d3-4dcb-aa53-c72091f6dc6d.png)
 
 ___
 
@@ -59,7 +59,7 @@ Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh t
 
 ![image](https://user-images.githubusercontent.com/94363381/211843590-f0caef3f-af6c-46c6-ab82-8f623b453bf1.png)
 
-![image](https://user-images.githubusercontent.com/94363381/211844195-34620cb7-20d3-4dcb-aa53-c72091f6dc6d.png)
+![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
 
 
 
