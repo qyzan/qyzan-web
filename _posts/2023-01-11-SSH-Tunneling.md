@@ -45,22 +45,23 @@ Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **‚Ä
 Kali ini saya akan ssh dari Host ke server Database
 Kasusnya : di server database sudah setup phpmyadmin sehingga dapat diakses melalui web untuk koneksi ke database nya.
 
-![image](https://user-images.githubusercontent.com/94363381/211854869-f8e0d4d9-1d1b-40cb-88fc-194c5d599f57.png)
+![image](https://user-images.githubusercontent.com/94363381/221343560-26bd3bf9-63a2-480f-8341-f7f3c96043b9.png)
 
 
 
 Setelah menjalankan perintah tersebut, kita dapat mengakses database dengan port 3333. Ketika kita sedang mengakses sebenarnya kita sedang mengakses server database dengan port 3306 dan 80. Dikarenakan kita setup phpmyadmin di server database kita bisa liat koneksi nya melalui host dengan http://localhost[port_local], 
 
-![image](https://user-images.githubusercontent.com/94363381/211844195-34620cb7-20d3-4dcb-aa53-c72091f6dc6d.png)
+
+![image](https://user-images.githubusercontent.com/94363381/221343663-bb47473f-b428-40ef-ae12-ff773e86bfdd.png)
 
 ___
 
+![image](https://user-images.githubusercontent.com/94363381/221343717-13497893-4422-4db3-bbbf-d81f16d169bc.png)
+
+
 Sementara itu ketika kita mengakses aplikasi web di server web menggunakan ssh tunneling, kita dapat mengaksesnya dengan http://localhost[local_port], sama hal nya dengan server database, ketika kita sedangan mengakses localhost dengan local_port sebenarnya kita sedang mengakses http://[ip_server_web].
 
-![image](https://user-images.githubusercontent.com/94363381/211843590-f0caef3f-af6c-46c6-ab82-8f623b453bf1.png)
-
-![image](https://user-images.githubusercontent.com/94363381/211854813-0952cf76-f1de-497f-887f-b58fb8ca51ab.png)
-
+![image](https://user-images.githubusercontent.com/94363381/221343734-df5e0ae4-0e9b-4efc-a908-46aeb80a63c5.png)
 
 
 ##### 2. Remote SSH Port Forwarding
@@ -69,39 +70,39 @@ Kita akan melakukan SSH Tunneling ke server untuk format commandnya sendiri **‚Ä
 
 Kali ini saya akan SSH Tunneling melalui server ke Host
 
-![image](https://user-images.githubusercontent.com/94363381/211844634-b3274050-2e48-4af3-9d07-466549642495.png)
+![image](https://user-images.githubusercontent.com/94363381/221343759-27853452-d01c-48a4-862b-f320a3de6b39.png)
 
 
 Sekarang kita dapat mengakses http://[ip_server:[remote_port]], yang diakses sebenarnya adalah web server pada komputer local.
 
-![image](https://user-images.githubusercontent.com/94363381/211845062-29401500-8054-471e-9a53-81019bf8aa61.png)
+![image](https://user-images.githubusercontent.com/94363381/221343777-29718892-ef24-443f-8f2a-c590dfa6cba9.png)
 
 
 Sementara itu ketika kita mengakses databases di server database, kita dapat mengaksesnya dengan http://[ip_server:[remote_port]/phpmyadmin], yang sebenarnya yang diakses adalah databases pada komputer local.
 Karena di komputer saya menggunakan XAMPP maka kita dapat mengakses database hanya menggunakan phpmyadmin 
 
-![image](https://user-images.githubusercontent.com/94363381/211845134-ad207c5a-a374-43b4-b8d7-81525a96a5e3.png)
 
+![image](https://user-images.githubusercontent.com/94363381/221343803-4d006c28-63ca-4ea7-b5a2-f6ade16056e6.png)
 
 
 ##### 3. Dynamic SSH Port Forwarding
 
 Kita akan melakukan SSH Tunnelling ke server untuk format commandnya sendiri **‚Äú ssh -D [ip_local]:[port_local] user@ip-server‚Äù.**
 
-![image](https://user-images.githubusercontent.com/94363381/211845061-271ba50a-9c8b-46d1-98b4-e0c3c7aeaff4.png)
+![image](https://user-images.githubusercontent.com/94363381/221343811-a64a5e9b-ee17-45ec-b785-216e6909426b.png)
 
 Kemudian setup proxy di web browser.
 
-![image](https://user-images.githubusercontent.com/94363381/211845224-542dcab7-d403-460e-9dab-d67f9b8610fc.png)
+![image](https://user-images.githubusercontent.com/94363381/221343821-07b3bfa0-6ad6-46cc-9461-2aaafe3eac99.png)
 
 Dengan menggunakan perintah diatas kita akan membuat sebuah proxy dengan menggunakan SOCKS proxy, yang mana website yang kita akses melalui perantara server, sehingga yang terbaca mengunjungi website adalah IP server bukan IP dari host (local).
 Biasanya akan terdapat log seperti dibawah ini jika kita sedang menggunakan SSH Tunneling Dynamis :
 
-![image](https://user-images.githubusercontent.com/94363381/211845322-3bbf433d-4814-4b3c-aaaa-0c972aac0e3b.png)
+![image](https://user-images.githubusercontent.com/94363381/221343825-3099b97a-4854-4e87-b155-a035a3e1cd5d.png)
 
 Kita scan port 8080 menggunakan nmap :
 
-![image](https://user-images.githubusercontent.com/94363381/211845410-19960544-ad37-4d5d-b9df-b8f14d98afe0.png)
+![image](https://user-images.githubusercontent.com/94363381/221343828-52344270-1104-4859-a7e0-7d0b07628c8d.png)
 
 
 
